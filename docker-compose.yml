@@ -1,0 +1,11 @@
+version: '3'
+services:
+  python:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: docker_compose_python
+    working_dir: /var/app/docker_compose_python
+    volumes:
+      - .:/var/app/docker_compose_python
+
