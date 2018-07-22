@@ -18,4 +18,8 @@ COPY ./requirements.txt .
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "./main.py"]
+WORKDIR /var/app
+
+COPY ./main.py /var/app
+
+CMD ["python", "/var/app/main.py"]
